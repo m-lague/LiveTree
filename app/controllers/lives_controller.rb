@@ -18,7 +18,7 @@ class LivesController < ApplicationController
     if @live.save
       redirect_to lives_path, notice: "live was successfully created."
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -29,7 +29,7 @@ class LivesController < ApplicationController
     if @live.update(live_params)
       redirect_to lives_path, notice: "live was successfully updated."
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
