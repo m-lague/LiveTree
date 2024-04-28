@@ -1,0 +1,9 @@
+<main class="container">
+  <%= link_to sanitize("&larr; Back to live"), live_path(@live) %>
+
+  <div class="header">
+    <h1>Edit live</h1>
+  </div>
+
+  <%= render "form", live: @live %>
+</main>

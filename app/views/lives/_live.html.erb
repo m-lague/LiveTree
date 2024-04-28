@@ -1,0 +1,12 @@
+<div class="live">
+  <%= link_to live.title, live_path(live) %>
+  <div class="live__actions">
+    <%= button_to "Delete",
+                  live_path(live),
+                  method: :delete,
+                  class: "btn btn--light" %>
+    <%= link_to "Edit",
+                edit_live_path(live),
+                class: "btn btn--light" %>
+  </div>
+</div>

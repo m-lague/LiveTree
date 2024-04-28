@@ -29,3 +29,18 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+    placeholders:
+      live:
+        title: Title of your live
+        description: What about this live ?
+        air_date: <%= DateTime.now %>
+    labels:
+      live:
+        title: Title
+        decription: Description
+        air_date: Live on the
+  helpers:
+    submit:
+      live:
+        create: Create live
+        update: Update live
