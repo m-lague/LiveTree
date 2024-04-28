@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  title: Mon premier live
+  description: Ceci est mon tout premier live j'espère que vous serez nombreux à le visionner
+  air_date: 2024-05-05 18:00:00
+
+two:
+  user: one
+  title: Mon second live
+  description: Venez encore plus nombreux
+  air_date: 2024-05-07 17:00:00
