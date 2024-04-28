@@ -68,3 +68,11 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'simple_form'
+gem 'devise', '~> 4.9', '>= 4.9.4'
+gem 'omniauth'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth-facebook'
+gem 'omniauth-instagram'
+gem 'omniauth-twitter'
