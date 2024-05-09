@@ -89,4 +89,15 @@
       color: $color-primary-rotate;
     }
   }
+  &--fav {
+    color: $color-text-body;
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:active {
+      color: $color-primary;
+
+    }
+  }
 }

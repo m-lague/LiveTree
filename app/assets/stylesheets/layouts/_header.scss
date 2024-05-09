@@ -6,7 +6,7 @@
   margin-top: $space-m;
   margin-bottom: $space-l;
 
-  @include media(tabletAndUp) {
+  @include media(tabletLandscapeAndUp) {
     margin-bottom: $space-xl;
   }
 }

@@ -3,15 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: $space-s;
   overflow: hidden;
   max-width: 10rem;
 
   background-color: $color-white;
   border-radius: $border-radius;
   box-shadow: $shadow-small;
-  // margin-bottom: $space-m;
-  // padding: $space-xs;
 
   &__image {
     width: 100%;
@@ -27,7 +24,6 @@
 
   &__infos {
     padding: $space-xs; /* Espacement à l'intérieur de la partie infos */
-     /* Permet à la partie d'infos de remplir l'espace disponible et de pousser les actions vers le bas */
     display: flex;
     flex-direction: column;
     span {
@@ -44,23 +40,4 @@
       text-decoration: none;
     }
   }
-
-
-  @include media(tabletAndUp) {
-    &__image {
-      flex: 0 0 5rem;
-      width: auto;
-      border-radius: $border-radius;
-      object-fit: cover;
-    }
-    &__actions {
-      display: flex;
-      flex: 0 0 auto;
-      align-self: flex-start;
-      gap: $space-xs;
-    }
-  }
-
-
-
 }

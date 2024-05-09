@@ -1,7 +1,7 @@
 <div class="card">
   <%= link_to live_path(live) do %>
     <div class="card__image">
-      <%= image_tag "https://placehold.co/300" %>
+      <%= image_tag "podcast.avif" %>
     </div>
 
     <div class="card__infos">
@@ -22,12 +22,17 @@
     <%= button_to live_path(live),
                   method: :delete,
                   class: "btn btn--delete" do%>
-                  <i class="fa-solid fa-trash"></i>
-                  <%end%>
+      <i class="fa-solid fa-trash"></i>
+    <%end%>
+
+    <%=link_to root_path, class: "btn btn--fav" do%>
+      <i class="fa-solid fa-heart"></i>
+    <%end%>
+
     <%= link_to edit_live_path(live),
                 class: "btn btn--edit" do %>
-                <i class="fa-regular fa-pen-to-square"></i>
-                <%end%>
+      <i class="fa-regular fa-pen-to-square"></i>
+    <%end%>
   </div>
 
 </div>
