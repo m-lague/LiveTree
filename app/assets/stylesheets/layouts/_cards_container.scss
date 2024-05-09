@@ -1,0 +1,14 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 10rem));
+  gap: $space-xs;
+  justify-content: center;
+
+  @include media(tabletAndUp) {
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 10rem));
+    padding-right: $space-m;
+    padding-left: $space-m;
+    gap: $space-l;
+
+  }
+}
