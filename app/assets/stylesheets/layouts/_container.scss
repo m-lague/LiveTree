@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  padding-right: $space-s;
+  padding-left: $space-s;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(tabletLandscapeAndUp) {
+    padding-right: $space-m;
+    padding-left: $space-m;
+    //max-width: 60rem;
+  }
+}

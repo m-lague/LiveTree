@@ -1,12 +1,38 @@
-<div class="live">
-  <%= link_to live.title, live_path(live) %>
-  <div class="live__actions">
-    <%= button_to "Delete",
-                  live_path(live),
+<div class="card">
+  <%= link_to live_path(live) do %>
+    <div class="card__image">
+      <%= image_tag "podcast.avif" %>
+    </div>
+
+    <div class="card__infos">
+      <h5 class="card__title"><%= live.title %></h5>
+      <div class="card__info">
+        <span class="card__info__value"><%= live.air_date.strftime("%A %d %b") %></span>
+      </div>
+      <div class="card__info">
+        <span class="card__info__label">Live at:</span>
+        <span class="card__info__value"><%= live.air_date.strftime("%H:%M") %></span>
+      </div>
+
+
+    </div>
+  <%end%>
+
+  <div class="card__actions">
+    <%= button_to live_path(live),
                   method: :delete,
-                  class: "btn btn--light" %>
-    <%= link_to "Edit",
-                edit_live_path(live),
-                class: "btn btn--light" %>
+                  class: "btn btn--delete" do%>
+      <i class="fa-solid fa-trash"></i>
+    <%end%>
+
+    <%=link_to root_path, class: "btn btn--fav" do%>
+      <i class="fa-solid fa-heart"></i>
+    <%end%>
+
+    <%= link_to edit_live_path(live),
+                class: "btn btn--edit" do %>
+      <i class="fa-regular fa-pen-to-square"></i>
+    <%end%>
   </div>
+
 </div>

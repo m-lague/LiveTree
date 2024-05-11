@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <div class="navbar-logo">
+
+  </div>
+  <div class="navbar-search">
+
+  </div>
+  <div class="navbar-menu">
+    <% if current_user %>
+      <%= link_to "Mon compte", root_path %>
+      <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Connexion", new_user_session_path %>
+      <%= link_to "Inscription", new_user_registration_path %>
+    <% end %>
+  </div>
+</nav>

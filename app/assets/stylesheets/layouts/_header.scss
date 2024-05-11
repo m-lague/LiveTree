@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-s;
+  justify-content: space-between;
+  margin-top: $space-m;
+  margin-bottom: $space-l;
+
+  @include media(tabletLandscapeAndUp) {
+    margin-bottom: $space-xl;
+  }
+}

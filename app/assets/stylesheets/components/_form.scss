@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-xs;
+
+  &__group {
+    flex: 1;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: $space-xxs $space-xs;
+    border: $border;
+    border-radius: $border-radius;
+    outline: none;
+    transition: box-shadow 250ms;
+
+    &:focus {
+      box-shadow: 0 0 0 2px $color-glint;
+    }
+
+    &--invalid {
+      border-color: $color-primary;
+    }
+  }
+}
