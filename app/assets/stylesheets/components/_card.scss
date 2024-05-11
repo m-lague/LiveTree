@@ -33,11 +33,7 @@
   }
 
   &__actions {
-    //padding: 10px;
     display: flex;
     justify-content: space-between;
-    a, input[type="submit"] {
-      text-decoration: none;
-    }
   }
 }
