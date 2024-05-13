@@ -17,9 +17,10 @@
   $font-size-xxxxl: 2.5rem; // 40px
 
   // Three different text colors
-  $color-text-header: hsl(0, 1%, 16%);
-  $color-text-body:   hsl(0, 5%, 25%);
-  $color-text-muted:  hsl(0, 1%, 44%);
+  $color-text-header:   hsl(0, 1%, 16%);
+  $color-text-body:     #CCCCCC;
+  $color-text-muted:    hsl(0, 1%, 44%);
+  $color-text-highlight:#F72585;
 
   // Classical and robust spacing system
   $space-xxxs: 0.25rem; // 4px
@@ -34,27 +35,29 @@
   $space-xxxxl: 4rem;   // 64px
 
   // Application colors
-  $color-primary:          hsl(350, 67%, 50%);
-  $color-primary-rotate:   hsl(10, 73%, 54%);
+  $color-primary:          hsl(276, 91%, 38%);
+  $color-primary-rotate:   #3F37C9;
   $color-primary-bg:       hsl(0, 85%, 96%);
   $color-secondary:        hsl(101, 45%, 56%);
   $color-secondary-rotate: hsl(120, 45%, 56%);
-  $color-tertiary:         hsl(49, 89%, 64%);
-  $color-glint:            hsl(210, 100%, 82%);
+  $color-tertiary:         #4CC9F0;
+  $color-glint:            #F72585;
 
   // Neutral colors
   $color-white:      hsl(0, 0%, 100%);
-  $color-background: hsl(30, 50%, 98%);
+  $color-background: radial-gradient(hsl(290 42% 46), hsl(258, 28%, 34%));
   $color-light:      hsl(0, 6%, 93%);
   $color-dark:       $color-text-header;
 
   // Border radius
-  $border-radius: 0.375rem; // 6px
-  $border-rounded: 50%;
+  $border-radius:       0.375rem; // 6px
+  $border-radius-large: 2.5rem; // 56px
+  $border-rounded:      50%;
 
   // Border
   $border: solid 2px $color-light;
 
   // Shadows
-  $shadow-large:  2px 4px 10px hsl(0 0% 0% / 0.1);
-  $shadow-small:  1px 3px 6px hsl(0 0% 0% / 0.1);
+  $shadow-large:        0px 0px 10px hsl(194 85% 0%);
+  $shadow-large-hover:  0px 0px 10px hsl(194 85% 62%);
+  $shadow-small:        1px 3px 6px #B5179E;
