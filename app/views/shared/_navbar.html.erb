@@ -1,17 +1,20 @@
 <nav class="navbar">
-  <div class="navbar-logo">
-
+  <div class="navbar__logo">
+    <%= image_tag "logo.jpg"%>
   </div>
-  <div class="navbar-search">
 
-  </div>
-  <div class="navbar-menu">
+  <!-- TODO: Add the search bar here -->
+
+  <div class="navbar__menu">
     <% if current_user %>
-      <%= link_to "Mon compte", root_path %>
-      <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %>
+      <%= link_to  root_path  do %>
+        <h5>My Account</h5>
+      <%end%>
+      <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: {turbo_method: :delete} %>
     <% else %>
-      <%= link_to "Connexion", new_user_session_path %>
-      <%= link_to "Inscription", new_user_registration_path %>
+
+      <%= link_to "Sign in", new_user_session_path %>
+      <%= link_to "create my account", new_user_registration_path %>
     <% end %>
   </div>
 </nav>
