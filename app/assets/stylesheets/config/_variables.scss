@@ -44,9 +44,9 @@
   $color-glint:            #F72585;
 
   // Neutral colors
-  $color-white:      hsl(0, 0%, 100%);
-  $color-background: radial-gradient(hsl(290 42% 46), hsl(258, 28%, 34%));
-  $color-light:      hsl(0, 6%, 93%);
+  $color-white:      hsl(0 0% 100%);
+  $color-background: radial-gradient(hsl(290 42% 46%), hsl(258 28% 34%));
+  $color-light:      hsl(0 6% 93%);
   $color-dark:       $color-text-header;
 
   // Border radius
