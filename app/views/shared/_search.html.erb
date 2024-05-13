@@ -1,0 +1,10 @@
+<div class="navbar__search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+    <%= simple_form_for :search, url: search_path, method: :get do |f| %>
+      <%= f.input :query, label: false, placeholder: "Search..." %>
+      <%= f.button :submit, class: "btn btn-primary" do %>
+        <i class="fa-solid fa-search"></i>
+      <% end %>
+    <% end %>
+</div>
