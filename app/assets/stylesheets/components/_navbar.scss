@@ -2,8 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background: $color-background;
   padding: 1rem 0;
 
 
@@ -49,7 +47,7 @@
       align-items: center;
       margin-right: 1rem;
       text-decoration: none;
-      color: $color-text-header;
+
     }
   }
 
