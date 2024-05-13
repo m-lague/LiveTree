@@ -15,6 +15,7 @@
   $font-size-xxl: 1.5rem;   // 24px
   $font-size-xxxl: 2rem;    // 32px
   $font-size-xxxxl: 2.5rem; // 40px
+  $font-size-header: 4.5rem; // 72px
 
   // Three different text colors
   $color-text-header:   hsl(0, 1%, 16%);
@@ -34,9 +35,10 @@
   $space-xxxl: 3rem;    // 48px
   $space-xxxxl: 4rem;   // 64px
 
+
   // Application colors
   $color-primary:          hsl(276, 91%, 38%);
-  $color-primary-rotate:   #3F37C9;
+  $color-primary-rotate:   hsl(229 83% 60%);
   $color-primary-bg:       hsl(0, 85%, 96%);
   $color-secondary:        hsl(101, 45%, 56%);
   $color-secondary-rotate: hsl(120, 45%, 56%);
@@ -45,7 +47,7 @@
 
   // Neutral colors
   $color-white:      hsl(0 0% 100%);
-  $color-background: radial-gradient(hsl(290 42% 46%), hsl(258 28% 34%));
+  $color-background: radial-gradient(hsl(290 57% 30%), hsl(258 93% 16%));
   $color-light:      hsl(0 6% 93%);
   $color-dark:       $color-text-header;
 

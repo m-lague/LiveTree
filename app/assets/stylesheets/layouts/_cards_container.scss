@@ -1,9 +1,9 @@
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8rem, 10rem));
-  gap: $space-xs;
+  gap: $space-s;
   justify-content: center;
-  padding: 20px;
+  padding: $space-xs;
   border-radius: $border-radius-large;
 
   @include media(tabletLandscapeAndUp) {

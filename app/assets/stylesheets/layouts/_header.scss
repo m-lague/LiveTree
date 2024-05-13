@@ -1,12 +1,25 @@
 .header {
   display: flex;
   flex-wrap: wrap;
-  gap: $space-s;
+  gap: $space-xl;
   justify-content: space-between;
   margin-top: $space-m;
   margin-bottom: $space-l;
+  align-items: center;
+  flex-direction: column;
+
+  &__title {
+    font-size: $font-size-header;
+    font-weight: bold;
+    color: $color-white;
+
+    &--highlight {
+      color: $color-tertiary;
+    }
+  }
 
   @include media(tabletLandscapeAndUp) {
     margin-bottom: $space-xl;
+    align-items: flex-start;
   }
 }
