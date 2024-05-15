@@ -20,6 +20,7 @@ body {
   min-height: 100%;
 
   background: $color-background;
+  background-attachment: fixed;
   color: $color-text-body;
   line-height: $line-height-body;
   font-family: $font-family-sans;
