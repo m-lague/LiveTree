@@ -1,16 +1,16 @@
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, 10rem));
+  grid-template-columns: repeat(auto-fit, minmax(8rem, $card-width));
   gap: $space-s;
   justify-content: center;
   padding: $space-xs;
   border-radius: $border-radius-large;
 
   @include media(tabletLandscapeAndUp) {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 10rem));
-    padding-right: $space-m;
-    padding-left: $space-m;
-    gap: $space-l;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, $card-width));
+    padding: $space-xxl;
+    max-width: 80rem;
+    gap: $space-m;
 
   }
 }

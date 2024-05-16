@@ -2,19 +2,15 @@
   <%= link_to live_path(live) do %>
     <div class="card__image">
       <%= image_tag "podcast.avif" %>
+      <h5 class="card__title"><%= live.title %></h5>
     </div>
 
     <div class="card__infos">
-      <h5 class="card__title"><%= live.title %></h5>
       <div class="card__info">
-        <span class="card__info__value"><%= live.air_date.strftime("%A %d %b") %></span>
+        <span class="card__info__value">
+          <%= live.air_date.strftime("%A %d %b") %>
+          <%= live.air_date.strftime("%H:%M") %></span>
       </div>
-      <div class="card__info">
-        <span class="card__info__label">Live at:</span>
-        <span class="card__info__value"><%= live.air_date.strftime("%H:%M") %></span>
-      </div>
-
-
     </div>
   <%end%>
 
