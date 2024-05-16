@@ -22,16 +22,16 @@
     <%= button_to live_path(live),
                   method: :delete,
                   class: "btn btn--delete" do%>
-      <i class="fa-solid fa-trash"></i>
+      <ion-icon name="trash"></ion-icon>
     <%end%>
 
     <%=link_to root_path, class: "btn btn--fav" do%>
-      <i class="fa-solid fa-heart"></i>
+      <ion-icon name="heart"></ion-icon>
     <%end%>
 
     <%= link_to edit_live_path(live),
                 class: "btn btn--edit" do %>
-      <i class="fa-regular fa-pen-to-square"></i>
+      <ion-icon name="create-outline"></ion-icon>
     <%end%>
   </div>
 

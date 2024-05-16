@@ -1,13 +1,22 @@
 <main class="container">
   <div class="header">
     <h1 class="header__title">
-      All
-      <span class="header__title--highlight">Social Lives</span> in One Place.
+      All</h1>
+      <div class="header__network__container">
+      <div class="header__title__network">Facebook</div>
+      <div class="header__title__network">Instagram</div>
+      <div class="header__title__network">Tiktok</div>
+      <div class="header__title__network">Youtube</div>
+      <div class="header__title__network">Snapchat</div>
+      </div>
+         <h1 class="header__title">Lives in One Place.
     </h1>
-    <%= link_to "New live",
-                new_live_path,
-                class: "btn btn--primary" %>
+
+    <div class="header__cta">
+      <%= link_to "New live", new_live_path, class: "btn btn--primary" %>
+    </div>
   </div>
+
   <div class="cards-container">
     <%= render @lives %>
   </div>

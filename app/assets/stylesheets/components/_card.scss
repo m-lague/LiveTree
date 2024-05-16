@@ -5,6 +5,7 @@
   align-items: center;
   overflow: hidden;
   max-width: 10rem;
+  z-index: 1;
 
   background-color: $color-white;
   border-radius: $border-radius-large;
@@ -12,6 +13,7 @@
 
   &:hover, &:focus, &:focus-within {
     box-shadow: $shadow-large-hover;
+    z-index: 0;
   }
 
   &__image {
@@ -39,5 +41,6 @@
   &__actions {
     display: flex;
     justify-content: space-between;
+    font-size: $font-size-l;
   }
 }

@@ -53,7 +53,7 @@
 
   // Border radius
   $border-radius:       0.375rem; // 6px
-  $border-radius-large: 2.5rem; // 56px
+  $border-radius-large: 1.5rem; // 24px
   $border-rounded:      50%;
 
   // Border
@@ -61,5 +61,5 @@
 
   // Shadows
   $shadow-large:        0px 0px 10px hsl(194 85% 0%);
-  $shadow-large-hover:  0px 0px 10px hsl(194 85% 62%);
+  $shadow-large-hover:  0px 0px 200px -6px hsl(194 85% 62%);
   $shadow-small:        1px 3px 6px #B5179E;
