@@ -5,6 +5,7 @@
   justify-content: center;
   padding: $space-xs;
   border-radius: $border-radius-large;
+  margin: auto;
 
   @include media(tabletLandscapeAndUp) {
     grid-template-columns: repeat(auto-fit, minmax(8rem, $card-width));
