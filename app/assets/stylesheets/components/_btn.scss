@@ -33,7 +33,7 @@
 
   &--secondary {
     color: $color-white;
-    background-image: linear-gradient(to right, $color-secondary, $color-secondary-rotate);
+    background-color: $color-secondary;
 
     &:hover,
     &:focus,
@@ -76,7 +76,7 @@
     &:focus,
     &:focus-within,
     &:active {
-      color: $color-primary;
+      color: hsl(0 100% 50%);
     }
   }
   &--edit {
@@ -96,8 +96,9 @@
     &:focus,
     &:focus-within,
     &:active {
-      color: $color-primary;
+      color: $color-glint;
 
     }
   }
+
 }

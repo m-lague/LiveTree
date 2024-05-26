@@ -3,7 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(8rem, $card-width));
   gap: $space-s;
   justify-content: center;
-  padding: $space-xs;
+  padding: $space-xl $space-xs;
   border-radius: $border-radius-large;
   margin: auto;
 

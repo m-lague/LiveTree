@@ -12,6 +12,7 @@
 html {
   overflow-y: scroll;
   height: 100%;
+  scrollbar-color: $color-primary-rotate hsla(0, 50%, 90%, 60%);
 }
 
 body {

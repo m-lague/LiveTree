@@ -1,7 +1,11 @@
 .footer {
-
-  padding: 20px 4%;
+  padding: $space-xl 4% $space-l 4%;
   text-align: center;
+  border-style: solid none none none;
+  border-color: $color-light;
+  border-width: 1px;
+  margin: 0 $space-l;
+
 
   &__bio {
     float: left;
@@ -27,8 +31,9 @@
 
   &__signature {
     clear: both;
+    padding-top: $space-l;
     margin-top: 20px;
-    color: #999;
+    color: $color-text-muted;
   }
 
   @include media(tabletLandscapeAndUp) {
