@@ -4,7 +4,7 @@
 
   margin-top: $space-m;
   margin-bottom: $space-l;
-  padding-left: $space-xs;
+  padding: 0 $space-xs;
 
   &__title {
     display: flex;
@@ -90,7 +90,7 @@
   @include media(tabletLandscapeAndUp) {
     margin-bottom: $space-xl;
     padding-left: 10rem;
-    align-items: flex-start;
+
 
     &__cta {
       text-align: left;

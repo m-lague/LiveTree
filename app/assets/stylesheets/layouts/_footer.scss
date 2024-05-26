@@ -1,0 +1,45 @@
+.footer {
+  padding: $space-xl 4% $space-l 4%;
+  text-align: center;
+  border-style: solid none none none;
+  border-color: $color-light;
+  border-width: 1px;
+  margin: 0 $space-l;
+
+
+  &__bio {
+    float: left;
+    text-align: left;
+    width: 100%;
+  }
+
+  &__menu {
+    float: right;
+  }
+
+  &__column {
+    display: inline-block;
+    margin-right: 20px;
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__signature {
+    clear: both;
+    padding-top: $space-l;
+    margin-top: 20px;
+    color: $color-text-muted;
+  }
+
+  @include media(tabletLandscapeAndUp) {
+    &__bio {
+      width: 30%;
+    }
+
+  }
+}
