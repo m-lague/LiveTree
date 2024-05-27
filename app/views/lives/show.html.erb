@@ -8,18 +8,23 @@
 <div class="show-infos">
   <div class="show-infos__livecaster">
     <h2><%= @live.user.email %></h2>
-    <p><%# TODO: @live.user.bio %></p>
+    <p><%=@live.user.bio %></p>
   </div>
   <div class="show-infos__networks">
-    <ul>
-      <% @live.user.network_usernames.each_pair do |network, username| %>
-        <li><ion-icon name="logo-<%network%>"></ion-icon> <%= username %></li>
-      <% end %>
+    <ul> View on :
+      <% @live.user.network_usernames.each_pair do |network , username| %>
+        <%= link_to "https://#{network}.com/#{username}" do %>
+          <li>
+            <ion-icon name="logo-<%= network.downcase %>"></ion-icon>
+            <%= username %>
+          </li>
+        <%end%>
+      <%end%>
     </ul>
   </div>
 </div>
 
 <div class="content">
-  <h3>About this Live :</h3>
+  <h5>About this Live :</h5>
   <p><%= @live.description%></p>
 </div>
