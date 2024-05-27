@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :confirmable, :lockable, :timeoutable, :trackable , :omniauthable
 
   has_many :lives
+
+  enum role: { viewer: 0, livecaster: 1, boss: 2 }
+
+  validates :bio, length: { maximum: 150 }
+  serialize :network_usernames, JSON
 end

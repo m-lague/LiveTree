@@ -1,8 +1,25 @@
-<main class="container">
-  <%= link_to sanitize("&larr; Back to lives"), lives_path %>
-  <div class="header">
-    <h1>
-      <%= @live.title %>
-    </h1>
+<%= link_to sanitize("&larr; Back to lives"), lives_path %>
+<div class="header">
+  <h1>
+    <%= @live.title %>
+  </h1>
+  <p><%= @live.air_date.strftime("%A %d %b %H:%M") %> </p>
+</div>
+<div class="show-infos">
+  <div class="show-infos__livecaster">
+    <h2><%= @live.user.email %></h2>
+    <p><%# TODO: @live.user.bio %></p>
   </div>
-</main>
+  <div class="show-infos__networks">
+    <ul>
+      <% @live.user.network_usernames.each_pair do |network, username| %>
+        <li><ion-icon name="logo-<%network%>"></ion-icon> <%= username %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<div class="content">
+  <h3>About this Live :</h3>
+  <p><%= @live.description%></p>
+</div>
