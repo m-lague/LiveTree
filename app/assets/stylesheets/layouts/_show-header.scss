@@ -32,14 +32,17 @@
     }
 
   }
-  @include media(tabletPortraitAndUp) {
-
+  @include media(tabletLandscapeAndUp) {
     justify-content: start;
-
 
       &__infos {
         flex-direction: row;
+        justify-content: space-around;
       }
-    
+
+      &__livecaster {
+        align-items: flex-start;
+      }
+
   }
 }
