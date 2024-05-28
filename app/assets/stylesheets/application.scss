@@ -13,10 +13,12 @@
 @import "components/visually_hidden";
 @import "components/card";
 @import "components/navbar";
+@import "components/content";
 
 
 // Layouts
 @import "layouts/container";
-@import "layouts/header";
+@import "layouts/index-header";
+@import "layouts/show-header";
 @import "layouts/footer";
 @import "layouts/cards_container";

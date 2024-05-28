@@ -1,8 +1,28 @@
-<main class="container">
-  <%= link_to sanitize("&larr; Back to lives"), lives_path %>
-  <div class="header">
-    <h1>
-      <%= @live.title %>
-    </h1>
+<%= link_to sanitize("&larr; Back"), :back %>
+<div class="show-header">
+  <h1>
+    <%= @live.title %>
+  </h1>
+  <p><%= @live.air_date.strftime("%A %d %b %H:%M") %> </p>
+</div>
+<div class="show-header__infos">
+  <div class="show-header__livecaster">
+    <h2><%= @live.user.first_name %> <%=@live.user.last_name %></h2>
+    <p class="bio"><%=@live.user.bio %></p>
   </div>
-</main>
+  <div class="show-header__networks">
+    <p>View on :</p>
+
+      <% @live.user.network_usernames.each_pair do |network , username| %>
+        <%= link_to "https://#{network}.com/#{username}" do %>
+            <ion-icon name="logo-<%= network.downcase %>"></ion-icon>
+        <%end%>
+      <%end%>
+
+  </div>
+</div>
+
+<div class="content">
+  <h5>About this Live :</h5>
+  <p><%= @live.description%></p>
+</div>

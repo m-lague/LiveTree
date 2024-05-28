@@ -1,0 +1,48 @@
+.show-header {
+  display: flex;
+  align-items: flex-end;
+  padding-left: $space-m;
+  margin: $space-xl 0;
+  gap: $space-m;
+  justify-content: space-around;
+
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    gap: $space-m;
+    padding: $space-m;
+    align-items: center;
+  }
+
+  &__livecaster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .bio {
+      font-size: $space-s;
+      text-align: center;
+    }
+  }
+
+  &__networks {
+    text-align: center;
+    a {
+      font-size: $font-size-xxxxl;
+    }
+
+  }
+  @include media(tabletLandscapeAndUp) {
+    justify-content: start;
+
+      &__infos {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      &__livecaster {
+        align-items: flex-start;
+      }
+
+  }
+}
