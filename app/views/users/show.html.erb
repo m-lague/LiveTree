@@ -1,2 +1,9 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= @first_name %> <%= @last_name %></h1>
+<p><%= @bio%></p>
+
+<% if @lives.any? %>
+ <div class="cards-container">
+    <%= render @lives %>
+  </div>
+
+<% end %>
