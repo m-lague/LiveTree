@@ -9,5 +9,6 @@ class User < ApplicationRecord
   enum role: { viewer: 0, livecaster: 1, boss: 2 }
 
   validates :bio, length: { maximum: 150 }
-  
+  validates :username, presence: true, uniqueness: true
+
 end
