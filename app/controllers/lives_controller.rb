@@ -6,6 +6,7 @@ class LivesController < ApplicationController
   end
 
   def show
+    @livecaster = @live.user
   end
 
   def new

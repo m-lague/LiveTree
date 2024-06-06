@@ -7,7 +7,7 @@
 </div>
 <div class="show-header__infos">
   <div class="show-header__livecaster">
-    <h2><%= @live.user.first_name %> <%=@live.user.last_name %></h2>
+    <h2><%= link_to @live.user.fullname , profile_path(@livecaster) %></h2>
     <p class="bio"><%=@live.user.bio %></p>
   </div>
   <div class="show-header__networks">

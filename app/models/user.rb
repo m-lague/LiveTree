@@ -11,4 +11,8 @@ class User < ApplicationRecord
   validates :bio, length: { maximum: 150 }
   validates :username, presence: true, uniqueness: true
 
+  def fullname
+    "#{first_name} #{last_name}"
+  end
+
 end
