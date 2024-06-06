@@ -5,14 +5,14 @@
       <p><%= @bio%></p>
   </div>
 </div>
-<p>My upcoming live streams</p>
+<p>&nbsp My upcoming live streams</p>
 <% if @lives.any? %>
   <div class="cards-container">
     <%= render @next_lives %>
   </div>
 <%end%>
 
-<p>My past live streams</p>
+<p>&nbsp My past live streams</p>
 <% if @lives.any? %>
   <div class="cards-container">
     <%= render @previous_lives %>
