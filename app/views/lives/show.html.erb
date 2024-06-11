@@ -14,7 +14,7 @@
     <p>View on :</p>
 
       <% @live.user.network_usernames.each_pair do |network , username| %>
-        <%= link_to "https://#{network}.com/#{username}" do %>
+        <%= link_to "https://#{network}.com/#{username}", target: "_blank" do %>
             <ion-icon name="logo-<%= network.downcase %>"></ion-icon>
         <%end%>
       <%end%>
