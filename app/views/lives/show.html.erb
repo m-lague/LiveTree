@@ -7,14 +7,14 @@
 </div>
 <div class="show-header__infos">
   <div class="show-header__livecaster">
-    <h2><%= @live.user.first_name %> <%=@live.user.last_name %></h2>
+    <h2><%= link_to @live.user.fullname , profile_path(@livecaster.username) %></h2>
     <p class="bio"><%=@live.user.bio %></p>
   </div>
   <div class="show-header__networks">
     <p>View on :</p>
 
       <% @live.user.network_usernames.each_pair do |network , username| %>
-        <%= link_to "https://#{network}.com/#{username}" do %>
+        <%= link_to "https://#{network}.com/#{username}", target: "_blank" do %>
             <ion-icon name="logo-<%= network.downcase %>"></ion-icon>
         <%end%>
       <%end%>

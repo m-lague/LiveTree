@@ -1,14 +1,15 @@
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(8rem, $card-width));
-  gap: $space-s;
-  justify-content: center;
-  padding: $space-xl $space-xs;
-  border-radius: $border-radius-large;
-  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: $space-m;
+  padding: 1rem;
 
   @include media(tabletLandscapeAndUp) {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(8rem, $card-width));
+    justify-content: center;
+    margin: auto;
     padding: $space-xxl;
     max-width: 80rem;
     gap: $space-m;

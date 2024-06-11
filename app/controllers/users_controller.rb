@@ -7,6 +7,9 @@ class UsersController < ApplicationController
     @network_usernames = @user.network_usernames
     @first_name = @user.first_name
     @last_name = @user.last_name
+    @fullname = "#{@user.first_name} #{@user.last_name}"
+    @next_lives = @user.lives.where("air_date > ?",DateTime.now)
+    @previous_lives = @user.lives.where("air_date < ?",DateTime.now)
   end
 
   def edit
@@ -14,6 +17,7 @@ class UsersController < ApplicationController
 
   def update
   end
+
 
   private
 
