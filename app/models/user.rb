@@ -6,13 +6,17 @@ class User < ApplicationRecord
 
   has_many :lives
 
+  has_one_attached :photo
+
   enum role: { viewer: 0, livecaster: 1, boss: 2 }
 
   validates :bio, length: { maximum: 150 }
+
   validates :username, presence: true, uniqueness: true
 
   def fullname
     "#{first_name} #{last_name}"
   end
+
 
 end
