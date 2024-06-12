@@ -1,7 +1,7 @@
 <div class="show-header">
   <div class="show-header__infos">
       <% if @user.photo.attached? %>
-        <%= cl_image_tag @user.photo.key %>
+        <%= cl_image_tag @user.photo.key, class: "show-header__avatar" %>
       <%else%>
         <%= image_tag "avatar-placeholder.jpg", alt: "avatar", class: "show-header__avatar"%>
       <%end%>
