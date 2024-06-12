@@ -76,3 +76,4 @@ gem "omniauth-rails_csrf_protection"
 gem 'omniauth-facebook'
 gem 'omniauth-instagram'
 gem 'omniauth-twitter'
+gem "dotenv-rails"

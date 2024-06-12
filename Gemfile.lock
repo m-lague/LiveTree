@@ -109,6 +109,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (3.1.2)
+    dotenv-rails (3.1.2)
+      dotenv (= 3.1.2)
+      railties (>= 6.1)
     drb (2.2.1)
     erubi (1.12.0)
     faraday (2.9.0)
@@ -362,6 +366,7 @@ DEPENDENCIES
   dartsass-rails
   debug
   devise (~> 4.9, >= 4.9.4)
+  dotenv-rails
   importmap-rails
   jbuilder
   omniauth
