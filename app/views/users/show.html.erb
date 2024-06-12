@@ -1,6 +1,10 @@
 <div class="show-header">
   <div class="show-header__infos">
-      <img src="https://placehold.in/300x300" alt="avatar" class="show-header__avatar">
+      <% if @user.photo.attached? %>
+        <%= cl_image_tag @user.photo.key %>
+      <%else%>
+        <%= image_tag "avatar-placeholder.jpg", alt: "avatar", class: "show-header__avatar"%>
+      <%end%>
       <h3><%= @first_name %> <%= @last_name %></h3>
       <p><%= @bio%></p>
   </div>
