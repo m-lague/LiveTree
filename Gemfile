@@ -77,3 +77,4 @@ gem 'omniauth-facebook'
 gem 'omniauth-instagram'
 gem 'omniauth-twitter'
 gem "dotenv-rails"
+gem "cloudinary"
