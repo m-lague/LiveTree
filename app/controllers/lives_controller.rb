@@ -46,6 +46,6 @@ class LivesController < ApplicationController
   end
 
   def live_params
-    params.require(:live).permit(:title, :description, :air_date)
+    params.require(:live).permit(:title, :description, :air_date, :image)
   end
 end

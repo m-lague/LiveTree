@@ -1,10 +1,15 @@
 <%= link_to sanitize("&larr; Back"), :back %>
-<div class="show-header">
-  <h1>
-    <%= @live.title %>
-  </h1>
-  <p><%= @live.air_date.strftime("%A %d %b %H:%M") %> </p>
+<div class="show-hero">
+  <%= cl_image_tag @live.image.key %>
+  <div class="show-header">
+
+    <h1>
+      <%= @live.title %>
+    </h1>
+    <p><%= @live.air_date.strftime("%A %d %b %H:%M") %> </p>
+  </div>
 </div>
+
 <div class="show-header__infos">
   <div class="show-header__livecaster">
     <h2><%= link_to @live.user.fullname , profile_path(@livecaster.username) %></h2>

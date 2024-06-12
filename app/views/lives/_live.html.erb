@@ -1,7 +1,11 @@
 <div class="card">
   <%= link_to live_path(live), class:"card__link" do %>
     <div class="card__image">
-      <%= image_tag "podcast.avif" %>
+      <%if live.image.attached? %>
+        <%= cl_image_tag live.image.key %>
+      <%else%>
+        <%= image_tag "placeholder.svg"%>
+      <%end%>
 
     </div>
 
