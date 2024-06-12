@@ -2,6 +2,7 @@
   display: flex;
   align-items: flex-end;
   padding-left: $space-m;
+  padding-right: $space-m;
   margin: $space-xl 0;
   gap: $space-m;
   justify-content: space-around;
@@ -23,6 +24,11 @@
       font-size: $space-s;
       text-align: center;
     }
+  }
+  &__avatar {
+    border-radius: 50%;
+    width: 96px;
+    height: 96px;
   }
 
   &__networks {

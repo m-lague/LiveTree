@@ -13,12 +13,12 @@
 
   <body>
     <main class="container">
-      <%= render "shared/navbar"%>
+      <%= render "shared/navbar" unless params[:controller] == "users" && params[:action] == "show"%>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
       <%= yield %>
-      <%= render "shared/footer"%>
+      <%= render "shared/footer" unless params[:controller] == "users" && params[:action] == "show"%>
     </main>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

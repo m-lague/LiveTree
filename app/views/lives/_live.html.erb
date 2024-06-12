@@ -1,12 +1,13 @@
 <div class="card">
-  <%= link_to live_path(live) do %>
+  <%= link_to live_path(live), class:"card__link" do %>
     <div class="card__image">
       <%= image_tag "podcast.avif" %>
-      <h5 class="card__title"><%= live.title %></h5>
+
     </div>
 
     <div class="card__infos">
       <div class="card__info">
+        <h5 class="card__title"><%= live.title %></h5>
         <span class="card__info__value">
           <%= live.air_date.strftime("%A %d %b") %>
           <%= live.air_date.strftime("%H:%M") %></span>
@@ -15,11 +16,13 @@
   <%end%>
 
   <div class="card__actions">
+
     <%= button_to live_path(live),
                   method: :delete,
                   class: "btn btn--delete" do%>
       <ion-icon name="trash"></ion-icon>
     <%end%>
+
 
     <%=link_to root_path, class: "btn btn--fav" do%>
       <ion-icon name="heart"></ion-icon>
@@ -29,6 +32,7 @@
                 class: "btn btn--edit" do %>
       <ion-icon name="create-outline"></ion-icon>
     <%end%>
+
   </div>
 
 </div>
