@@ -4,6 +4,11 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :username,
+                hint: "leave it blank if you don't want to change it",
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "username", placeholder: "username" } %>
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -11,21 +16,27 @@
     <% end %>
 
     <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password", placeholder: "leave it blank if you don't want to change it "} %>
     <%= f.input :password_confirmation,
                 required: false,
-                input_html: { autocomplete: "new-password" } %>
+                input_html: { autocomplete: "new-password", placeholder: "leave it blank if you don't want to change it" } %>
     <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
                 required: true,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :username,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "username" } %>
-    <%= f.input :photo, as: :file, required: true %>
+                input_html: { autocomplete: "current-password", placeholder: "we need your current password to confirm your changes" } %>
+
+    <%= f.input :photo, as: :file, required: false, hint: "leave it blank if you don't want to change it" %>
+    <%= f.input :bio, placeholder: 'Write a short bio (150 max)', input_html: { maxlength: 150 } %>
+  </div>
+
+  <div class="form-inputs">Networks Usernames :
+    <%= f.simple_fields_for :network_usernames do |network| %>
+      <%= network.input :twitter, input_html: { placeholder: "leave it blank if you don't want to change it"} %>
+      <%= network.input :facebook, input_html: { placeholder: "leave it blank if you don't want to change it"} %>
+      <%= network.input :instagram, input_html: { placeholder: "leave it blank if you don't want to change it"} %>
+      <%= network.input :tiktok, input_html: { placeholder: "leave it blank if you don't want to change it"}%>
+      <%= network.input :youtube, input_html: { placeholder: "leave it blank if you don't want to change it"} %>
+    <% end %>
   </div>
 
   <div class="form-actions">

@@ -23,9 +23,10 @@
                 as: :file,
                 label: "Choose your profile picture",
                 required: true %>
+    <%= f.input :bio, placeholder: 'Write a short bio (150 max)', input_html: { maxlength: 150 } %>
   </div>
 
-  <div class="form-inputs">
+  <div class="form-inputs">Networks Usernames :
     <%= f.simple_fields_for :network_usernames do |network| %>
       <%= network.input :twitter, input_html: { placeholder: 'Twitter username'} %>
       <%= network.input :facebook, input_html: { placeholder: 'Facebook username'} %>

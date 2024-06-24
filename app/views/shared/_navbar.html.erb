@@ -7,7 +7,7 @@
 
   <div class="navbar__menu">
     <% if current_user %>
-      <%= link_to  root_path  do %>
+      <%= link_to  profile_path(current_user.username)  do %>
         <h5>My Account</h5>
       <%end%>
       <%= link_to "Sign out", destroy_user_session_path, method: :delete, data: {turbo_method: :delete} %>
