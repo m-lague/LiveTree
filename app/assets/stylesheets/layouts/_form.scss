@@ -1,0 +1,31 @@
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: $space-s;
+  padding: $space-l;
+}
+
+.form-actions {
+  display:flex;
+  justify-content: center;
+  padding-left: $space-l;
+  padding-right: $space-l;
+  .btn {
+    flex-grow: 1;
+  }
+}
+
+@include media(tabletLandscapeAndUp) {
+
+  .form-inputs {
+    max-width: 600px;
+  }
+
+  .form-actions {
+    justify-content: flex-start;
+    margin-left: 250px;
+    .btn {
+      flex-grow: 0;
+    }
+  }
+}

@@ -1,30 +1,45 @@
-<h2>Sign up</h2>
+<h2 class="show-header">Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
     <%= f.input :username,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "username" } %>
-    <%= f.input :photo, as: :file, required: true %>
+                input_html: { autocomplete: "username", placeholder: "username" } %>
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email", placeholder: 'Enter your email' }%>
+    <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password", placeholder: 'Password' } %>
+    <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password", placeholder: "confirm your password" } %>
+    <%= f.input :photo,
+                as: :file,
+                label: "Choose your profile picture",
+                required: true %>
+  </div>
+
+  <div class="form-inputs">
+    <%= f.simple_fields_for :network_usernames do |network| %>
+      <%= network.input :twitter, input_html: { placeholder: 'Twitter username'} %>
+      <%= network.input :facebook, input_html: { placeholder: 'Facebook username'} %>
+      <%= network.input :instagram, input_html: { placeholder: 'Instagram usernam}'} %>
+      <%= network.input :tiktok, input_html: { placeholder: 'TikTok username'}%>
+      <%= network.input :youtube, input_html: { placeholder: 'Youtube username'} %>
+    <% end %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: "btn--primary" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<div class="devise-links">
+  <%= render "devise/shared/links" %>
+</div>

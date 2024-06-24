@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit]
 
   def show
-    @user = User.find_by(username: params[:username])
     @lives = @user.lives
     @bio = @user.bio
     @network_usernames = @user.network_usernames
@@ -20,6 +20,10 @@ class UsersController < ApplicationController
 
 
   private
+
+  def set_user
+    @user = User.find_by(usrname: params[:username])
+  end
 
   def user_params
     params.require(:user).permit(:bio, :links, :role, :username, :first_name, :last_name)
