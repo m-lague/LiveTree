@@ -1,0 +1,11 @@
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: $space-s;
+  padding: $space-l;
+}
+
+.form-actions {
+  display:flex;
+  justify-content: center;
+}
