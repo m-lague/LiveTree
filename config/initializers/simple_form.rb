@@ -14,7 +14,7 @@ SimpleForm.setup do |config|
   # stack. The options given below are used to wrap the
   # whole input.
   config.wrappers :default, class: "form__group" do |b|
-    b.use :label, class: "visually-hidden"
+    b.use :label, class: ""
     b.use :input, class: "form__input", error_class: "form__input--invalid"
 #:input, hint_class: :field_with_hint, error_class: :field_with_errors, valid_class: :field_without_errors do |b|
     ## Extensions enabled by default
