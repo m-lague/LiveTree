@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  padding-left: 2rem;
 
 
   &__logo {
@@ -10,6 +11,14 @@
     align-items: center;
     justify-content: center;
     width: 5rem;
+    font-size: $font-size-xxxl;
+
+    a {
+      color: white;
+      :hover {
+        color: white;
+      }
+    }
   }
 
   &__search {
@@ -41,7 +50,7 @@
       display: flex;
       align-items: center;
       margin-right: 1rem;
-    
+
 
     }
   }
