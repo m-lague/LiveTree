@@ -7,7 +7,7 @@
     <%= f.input :username,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "username", placeholder: "username" } %>
+                input_html: { autocomplete: "username", placeholder: "Enter a username" } %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -23,14 +23,14 @@
                 as: :file,
                 label: "Choose your profile picture",
                 required: true %>
-    <%= f.input :bio, placeholder: 'Write a short bio (150 max)', input_html: { maxlength: 150 } %>
+    <%= f.input :bio, placeholder: 'Write a short bio (150 max)', input_html: { maxlength: 150 }, label: "Bio - max 150" %>
   </div>
 
   <div class="form-inputs">Networks Usernames :
     <%= f.simple_fields_for :network_usernames do |network| %>
       <%= network.input :twitter, input_html: { placeholder: 'Twitter username'} %>
       <%= network.input :facebook, input_html: { placeholder: 'Facebook username'} %>
-      <%= network.input :instagram, input_html: { placeholder: 'Instagram usernam}'} %>
+      <%= network.input :instagram, input_html: { placeholder: 'Instagram username'} %>
       <%= network.input :tiktok, input_html: { placeholder: 'TikTok username'}%>
       <%= network.input :youtube, input_html: { placeholder: 'Youtube username'} %>
     <% end %>

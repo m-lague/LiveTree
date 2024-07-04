@@ -9,7 +9,9 @@
       <%=link_to "Edit my profile", edit_user_registration_path(current_user)%>
       <p><%= @bio%></p>
   </div>
+  <%= link_to "Add a Live", new_live_path , class: "btn btn--primary" %>
 </div>
+
 <p>&nbsp My upcoming live streams</p>
 <% if @lives.any? %>
   <div class="cards-container">
